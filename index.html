@@ -3,31 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="Triplefive.css"
-<title>Triplefive Airlines</title>
-<nav>
+<link rel="stylesheet" href="styles.css">
+<title> Triplefive Airlines </title>
+<span>
+<nav style="text-align: center;">
         <a href="#home">Home</a>
         <a href="#book">Book</a>
-        <a href="#privilege club">Privilege club </a>
-        <a href="#">Help</a>
+        <a href="#privilege club">About </a>
+        <a href="#privilege club"> History </a> 
+        <button class="rounded-button"> Login </button> 
+        <button> Signup </button>
     </nav> 
-    <i class="fa fa-search"></i>
-    <i class="fa fa-search" style="font-size:24px"></i>
-    <div class="header-container">
-        <div class="search-bar">
-          <input type="text" placeholder="Search...">
-          <img src ="https://img.icons8.com/ios/50/000000/search--v1.png " alt="Search Icon"> <i class='fas fa-search' style='font-size:24px'></i>
-        </div>
-        <button class="login-btn" onclick="showLoginPopup()">Login</button>
-  </div>
+</span>
+<p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-size: xx-large; margin-left: 50px; margin-top: 50px; font-weight: bold;"> Find & Search Your<br>
+ <span style="color:aqua; text-decoration-line:underline; text-decoration-color: blue;">Favorite </span>Airplane <br>
+   </p>
+   <p style="margin-left: 50px;">We are here to make your flying memorable</p>
 </head>
 <body>
-    <h1> How to fly in style </h1>
+    <h1> How to fly in style</h1>
 <p> Book trips to destinations around the world with Triplefive Airlines & fly on board an award-winning airline. Enjoy special fares, collect Avios & more.                    
 </p>
-<h2> Top deals from Nairobi </h2>
-   <p> Make it an incredible journey
-    Explore the world experience and plan an unforgettable trip beyond your flight.</p>
 <div class="button-container">
     <button class="booking-btn" onclick="showMessage('Car Rentals')">
         <img src="https://img.icons8.com/ios/50/ffffff/car--v1.png" alt="Car Rental Icon">
@@ -42,52 +38,41 @@
         Flights
       </button>
     </div>  
+<h2> Top deals from Nairobi </h2>
 <div>
 <image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPbP3IW3mLFsrZ6MrbbyCTiWMQu40hdEiPzA&s" 
 <div class="offer-container">
     <div class="price-label"> Manilla From 900 USD</div>
  <image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnL3b4D0m99eA7A1w51EUlJjv1wA5TCseBoA&s">
-  <div class="price-label"> Sweden From 1200 USD</div>
+    <div class="price-label"> Sweden From 1200 USD</div>
  </div>
+
  <div class="button-container">
-    <input type="text" id="departure" class="input-field" placeholder="Enter Departure Airport" >
-    <input type="text" id="arrival" class="input-field" placeholder="Enter Arrival Airport" >
+    <input type="text" id="departure" class="input-field" placeholder="Enter Departure Airport" required>
+    
+    <input type="text" id="arrival" class="input-field" placeholder="Enter Arrival Airport" required>
 
 <button class="continue-btn" onclick="continueFlight()">Continue</button>
 </div>
 <h2> Our Service </h2>
 Our people are the backbone of our business. We provide high-quality training and reward recognition to ensure an exceptional level of service. Whatever your needs, we’ll find a way.
-<div>
 <p> Our Advantage </p>
 <ul>
     <li> Network & Fleet</li>
     <li>Accreditation & Award</li>
     <li>Our Equipment</li>
   </ul>
-  <p>Experience</p>
-<ul>
-    <li>Cabin features</li>
-    <li>Inflight entertainment</li>
-    <li>Dining</li>
-    <li>Our lounges</li>
-  </ul>
-</div>
-<div>
-About us
-</div>
-<p>Learn more about our history, our business and sustainability initiatives
-</p>
-<div>
-  <image src="https://www.shutterstock.com/image-photo/airplane-flying-away-sky-high-260nw-2094309670.jpg" style="width:400px;height:200px;">
-    <p> Our business </p>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaklY4Lo6lnI_M8tFKCrpsagiVzQfVgJjYcg&s" alt="">
-    
-      <p> Our planet </p>
-    <image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdWtRc73ZnUF8LuQma01mvhmCJOtiPfuPP0w&s">
-      <p> Our people </p>
-<div>
-  <a href="https://www.example.com">Learn more</a>
-  </div>
-<script src="./index.js"></script>
+<script>
+    function continueFlight() {
+        const departure = document.getElementById('departure').value;
+        const arrival = document.getElementById('arrival').value;
+
+        if (departure && arrival) {
+            alert(Your flight details:\nDeparture: ${departure}\nArrival: ${arrival});
+        } else {
+             alert("Please fill in both departure and arrival airports.");
+        }
+    }
+</script>
 </body>
 </html>
