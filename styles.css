@@ -1,26 +1,40 @@
-body{background-color: whitesmoke;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
 nav{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem 0;
-    gap: 20px;
+    font-size: x-large; 
+}
+nav:first-of-type {margin-bottom: 20px;
+
+}
+nav:nth-of-type(2) {
+    marging-top: 20px;
+}
+.rounded button{
+    padding: 15px 32px;
 }
 button{
-    background-color: turquoise;
+    font-size: medium;
 }
-h1{color:yellowgreen;
-    text-align:center; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size:xx-large
+.menu_bar{
+    height: 80px; width: 100%; 
+    margin-left: 50px;margin-top: 50px;
 }
-h2 {color:mediumpurple;
-text-align: center;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    }
-        .round-image {
-      width: 150px;
-      height: 150px;
-      object-fit: cover; /* Ensure image fills the container without distortion */
-      border-radius: 50%;
-      border: 2px solid #ddd; /* Optional border */
-    }
+.menu_bar ul{
+    list-style: none;
+    display: flex;
+}
+.menu_bar ul li{
+    padding: 10px 30px
+}
+ul li {
+    display: inline-block;
+    position: relative;
+}
+ul li ul.dropdown li {
+    display: block;
+}
+ul li ul.dropdown {
+    width: 100%;
+    background: #8c52ff;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
