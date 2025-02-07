@@ -38,3 +38,16 @@ ul li ul.dropdown {
     z-index: 999;
     display: none;
 }
+.rounded-container {
+    border: 2px;
+    border-radius: 15px;
+    padding: 20px;
+    width: 400px;
+    word-wrap: break-word;
+}
+.rounded-container{
+    display:flex; flex-direction: row; height: fit-content; width: fit-content;
+}
+.rounded-container:hover {
+    color: blue;
+    }
